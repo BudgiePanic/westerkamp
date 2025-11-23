@@ -1,11 +1,33 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+//import Welcome from '../components/Welcome.astro';
+//import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+//<Layout>
+//	<Welcome />
+//</Layout>
+// On the home landing page we must put something with three js - something in 3D, because it would be so cool.
+// A 3D dragon character that points its head at the mouse cursor location
+// - mouse hover over a button, the dragon nods its head, happy
+// - mouse hover over the dragon = pet the dragon
+import '../styles/global.css'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>Westerkamp</title>
+  </head>
+  <body>
+	<Nav/>
+    <h1>Welcome to Ben Sanson's homepage!</h1>
+	<div><p>Why is it plain HTML? Because <a href="https://justfuckingusehtml.com/" target="_blank" rel="">this guy</a> and <a href="https://motherfuckingwebsite.com/" target="_blank">this guy</a> said so, and I think they're right.</p></div>
+  <Footer></Footer>
+  </body>
+</html>

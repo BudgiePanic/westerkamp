@@ -1,0 +1,88 @@
+---
+// In the about page we will have three sub sections.
+// - Free CV copy
+// - Education
+// - Work experience
+const TITLE="About Me";
+import '../styles/global.css'
+import Nav from '../components/Nav.astro'
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>{TITLE}</title>
+  </head>
+  <body>
+    <Nav/>
+    <h1>
+        {TITLE}
+    </h1>
+    <section>
+        <p>About me paragraph goes here!</p>
+    </section>
+    <section>
+        <h2>Work Experience</h2>
+        <ul class="experience">
+            <li><div class="li-content"><span>Developer at International Barcodes Limited.</span> <i>(February 2025 - Present)</i></div></li>
+            <li><div class="li-content"><span>Internship at Augview Limited.</span> <i>(April 2024 - July 2024)</i></div></li>
+            <li><div class="li-content"><span>Summer Research Scholarship.</span> <i>(November 2022 - Febuary 2023)</i></div></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Education</h2>
+        <h3>Victoria University of Wellington</h3>
+        <p><strong>Bachelor of Engineering with Honours (with First Class Honours)</strong>.</p> 
+        <p class="li-content"><span>Major in Software Engineering.</span> <i>(GPA: 8.69/9.0)</i></p>
+        <ul>
+            <li><p><b>2024:</b> 
+                <ul>
+                    <li><p><b>December: </b>Attend graduation ceremony.</p></li>
+                    <li><p><b>October: </b> Degree granted: Bachelor of Engineering with Honours (with First Class Honours in Software Engineering).</p></li>
+                    <li><p><b>July: </b>Complete remaining degree requirements (internship).</p></li>
+                </ul>
+            </li>
+            <li><p><b>2023:</b> Complete course work requirements.</p></li>
+            <li><p><b>2021:</b> Return to studies. Change major to Software Engineering <i>(always enjoyed computer science more).</i></p></li>
+            <li><p><b>2020:</b> Take gap year to avoid <span class="censor">COVID madness</span>.</p></li>
+            <li><p><b>2019:</b> Begin studies towards Bachelor of Engineering with Honours, majoring in Electrical and Electronic Engineering.</p></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Other</h2>
+        <ul>
+            <li><b>2023:</b>
+                <ul>
+                    <li>Published <a href="https://doi.org/10.1145/3611659.3616897" target="_blank">"SpaceVR"</a> at the 2023 ACM Symposium on Virtual Reality Software and Technology (VRST).</li>
+                    <li>Attended February International XR Workshop at University of Canterbury.</li>
+                </ul>
+            </li>
+            <li><p><b>2020:</b> Te Omanga Hospice Shop Storehand Volunteer.</p></li>
+        </ul>
+    </section>
+</body>
+
+<style>
+    .censor {
+        filter: blur(5px);
+    }
+    .censor:hover {
+        filter: blur(0px);
+    }
+    .experience {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+    .li-content {
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;        
+    }
+    .experience i {
+      margin-left: 1rem;
+      white-space: nowrap;
+    }
+</style>
+</html>

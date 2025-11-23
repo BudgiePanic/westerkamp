@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+const TITLE = "Blog Zone";
+import Nav from "../components/Nav.astro";
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>{TITLE}</title>
+  </head>
+  <body>
+    <Nav/>
+    <h1>{TITLE}</h1>
+    <p>The thoughts and musings of a man.</p>
+
+    <h3>Blog Posts:</h3>
+    <ul class="black-links">
+        <li><a href="/blog/can-llms-write-creatively">Can Large Language Models Write Creatively?</a></li>
+        <li><a href="/blog/better-pizza-is-out-there">Questing for better pizza</a></li>
+        <li><a href="/blog/quake-two-from-source">Running Quake 2 from the source</a></li>
+        <li><a href="/blog/road-to-ps2-emulation">Replaying childhood classics via PlayStation 2 emulation</a></li>
+        <li><a href="/blog/dog-zone">Dog photo cache</a></li>
+        <li><a href="/blog/the-imagineer">The Imagineer</a></li>
+    </ul>
+</body>
+
+<style>
+    .black-links a {
+        color: black;
+    }
+</style>
+</html>
