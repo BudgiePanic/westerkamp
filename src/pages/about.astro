@@ -4,8 +4,9 @@
 // - Education
 // - Work experience
 const TITLE="About Me";
-import '../styles/global.css'
-import Nav from '../components/Nav.astro'
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 <html lang="en">
   <head>
@@ -16,7 +17,7 @@ import Nav from '../components/Nav.astro'
     <title>{TITLE}</title>
   </head>
   <body>
-    <Nav/>
+    <Header/>
     <h1>
         {TITLE}
     </h1>
@@ -62,6 +63,7 @@ import Nav from '../components/Nav.astro'
             <li><p><b>2020:</b> Te Omanga Hospice Shop Storehand Volunteer.</p></li>
         </ul>
     </section>
+    <Footer/>
 </body>
 
 <style>

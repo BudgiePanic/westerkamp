@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
 const TITLE = "Blog Zone";
-import Nav from "../components/Nav.astro";
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 <html lang="en">
   <head>
@@ -12,7 +13,7 @@ import Nav from "../components/Nav.astro";
     <title>{TITLE}</title>
   </head>
   <body>
-    <Nav/>
+    <Header/>
     <h1>{TITLE}</h1>
     <p>The thoughts and musings of a man.</p>
 
@@ -25,6 +26,7 @@ import Nav from "../components/Nav.astro";
         <li><a href="/blog/dog-zone">Dog photo cache</a></li>
         <li><a href="/blog/the-imagineer">The Imagineer</a></li>
     </ul>
+    <Footer/>
 </body>
 
 <style>
