@@ -14,6 +14,8 @@
 import '../styles/global.css'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
+
+const gradColor = "purple";
 ---
 
 <html lang="en">
@@ -23,10 +25,19 @@ import Footer from '../components/Footer.astro'
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
     <title>Westerkamp</title>
+    <style define:vars={{gradColor}}
+    >
+      .rainbow {
+        background: radial-gradient(circle, var(--gradColor), black);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
   </head>
   <body>
 	<Nav/>
-    <h1>Welcome to Ben Sanson's homepage!</h1>
+    <h1>Welcome to Ben Sanson's <span class="rainbow">homepage</span>!</h1>
 	<div><p>Why is it plain HTML? Because <a href="https://justfuckingusehtml.com/" target="_blank" rel="">this guy</a> and <a href="https://motherfuckingwebsite.com/" target="_blank">this guy</a> said so, and I think they're right.</p></div>
   <Footer></Footer>
   </body>
